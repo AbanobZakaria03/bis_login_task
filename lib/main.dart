@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Poppins",
         inputDecorationTheme: const InputDecorationTheme(
-          fillColor: fillColor,
+          fillColor: grey,
           filled: true,
           isDense: true,
           border: OutlineInputBorder(

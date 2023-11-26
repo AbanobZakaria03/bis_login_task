@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                       ),
-                      fillColor: fillColor,
+                      fillColor: grey,
                       filled: true,
                       isDense: true,
                     ),
