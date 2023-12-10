@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:loginfit/pages/home_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/constants.dart';
 import 'pages/login_screen.dart';
 
-void main() {
+late final SharedPreferences prefs;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  prefs = await SharedPreferences.getInstance();
+
   runApp(const MyApp());
 }
 
@@ -35,9 +43,13 @@ class MyApp extends StatelessWidget {
         ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-
       ),
-      home: const LoginScreen(),
+      home: checkLogin() ? const HomeScreen() : const LoginScreen(),
     );
+  }
+
+  bool checkLogin() {
+    final bool isLogin = prefs.getBool('isLogin') ?? false;
+    return isLogin;
   }
 }

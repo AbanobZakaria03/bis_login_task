@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/constants.dart';
 import 'home_screen.dart';
@@ -181,6 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   content: Text('Success!'),
                                   backgroundColor: Colors.lightGreen),
                             );
+                            saveUser();
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -231,5 +233,9 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     }
     return false;
+  }
+  Future<void> saveUser() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('isLogin', true);
   }
 }
