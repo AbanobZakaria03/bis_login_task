@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "710171120768",
+    "project_id": "bis-firebase-test3626",
+    "storage_bucket": "bis-firebase-test3626.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710171120768:android:9f69f674b44fcd6e30c265",
+        "android_client_info": {
+          "package_name": "com.example.loginfit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2o39Od_xmnvvDA4TNKrkg7JsF2uKjuAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
