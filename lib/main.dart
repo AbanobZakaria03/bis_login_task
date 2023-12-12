@@ -20,20 +20,6 @@ Future<void> main() async {
 
   runApp(const MyApp());
 
-  var db = FirebaseFirestore.instance;
-
-  final city = <String, String>{
-    "name": "Los Angeles",
-    "state": "CA",
-    "country": "USA"
-  };
-
-  db
-      .collection("cities")
-      .doc("LA")
-      .set(city)
-      .onError((e, _) => print("Error writing document: $e"));
-
 }
 
 class MyApp extends StatelessWidget {
